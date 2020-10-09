@@ -87,7 +87,7 @@ class Dice {
 let dice = new Dice();
 //console.log(dice);
 
-for ( let i = 1; i < 5; i++ ) {
+for ( let i = 1; i < 6; i++ ) {
     dice.throw(); // Get new dice values
     console.log('Omgång ' + i);
     console.log('Tärningsvärden');
