@@ -18,7 +18,35 @@ Exempel på värden och deras svar:
 
 */
 
-function get_average_sum() {
-    
+function get_average_sum(arr) {
+    //Test all elements to see if they are all of type "number" using the filter function
+    if (arr.filter(nbr => typeof(nbr) != "number").length > 0){
+        return false;
+    }
+  
+    //Test array's length 
+    if (arr.length < 2 || arr.length > 10){
+        return false;
+    }
+
+    //Initialize the object we will use to store the results
+    let answer = {
+        sum : 0,
+        average: 0
+    }
+
+    //Calculate sum and average using reduce
+    answer.sum = arr.reduce((accum, currentValue) => (accum + currentValue));
+    answer.average = answer.sum/arr.length;
+
+    return answer;
 }
 
+
+let arr = [-1,2,18];
+let sum = get_average_sum(arr).sum;
+let average = get_average_sum(arr).average;
+
+if (get_average_sum(arr)) {
+    console.log(sum, average)
+}else console.log("Array not valid: Must contain between 2 and 10 integers!")
