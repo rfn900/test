@@ -43,10 +43,11 @@ function get_average_sum(arr) {
 }
 
 
-let arr = [-1,2,18];
-let sum = get_average_sum(arr).sum;
-let average = get_average_sum(arr).average;
+let arr = [4,2,1811];
+
 
 if (get_average_sum(arr)) {
+    let sum = get_average_sum(arr).sum;
+    let average = get_average_sum(arr).average;
     console.log(sum, average)
 }else console.log("Array not valid: Must contain between 2 and 10 integers!")
